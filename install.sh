@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dotfiles="$HOME/dotfiles"
-files="bashrc vimrc"
+files="vimrc gitconfig"
 
 if [ -d "$dotfiles" ]; then
 	echo "Symlinking dotfiles from $dotfiles"

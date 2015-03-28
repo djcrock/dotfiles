@@ -1,0 +1,7 @@
+[user]
+	name = David Crocker
+	email = mail@djcrocker.com
+[core]
+	editor = vim
+[alias]
+	graph = log --decorate --graph --pretty=oneline --abbrev-commit
