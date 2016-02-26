@@ -9,6 +9,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'wookiehangover/jshint.vim'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
