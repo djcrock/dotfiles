@@ -17,5 +17,8 @@ syntax enable
 set number
 inoremap jj <Esc>
 
-set background=dark
-colorscheme solarized
+set nobackup
+set nowritebackup
+
+autocmd Filetype javascript setl ts=2 sw=2 sts=2 et
+autocmd Filetype css setl ts=4 sw=4 sts=4 et

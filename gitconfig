@@ -7,3 +7,5 @@
 	graph = log --decorate --graph --pretty=oneline --abbrev-commit
 [push]
 	default = simple
+[oh-my-zsh]
+	hide-status = 1
