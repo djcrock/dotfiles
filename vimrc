@@ -21,5 +21,9 @@ inoremap jj <Esc>
 set nobackup
 set nowritebackup
 
+hi clear SpellBad
+hi SpellBad cterm=underline,bold ctermfg=magenta
+
 autocmd Filetype javascript setl ts=2 sw=2 sts=2 et
+autocmd Filetype html setl ts=2 sw=2 sts=2 et
 autocmd Filetype css setl ts=4 sw=4 sts=4 et
