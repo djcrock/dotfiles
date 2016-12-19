@@ -6,14 +6,12 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'wookiehangover/jshint.vim'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/syntastic'
 
 call vundle#end()
 filetype plugin indent on
@@ -37,18 +35,26 @@ hi SpellBad cterm=underline,bold ctermfg=magenta
 autocmd Filetype javascript setl ts=2 sw=2 sts=2 et
 autocmd Filetype mustache setl ts=2 sw=2 sts=2 et
 autocmd Filetype php setl ts=2 sw=2 sts=2 et
+autocmd Filetype yaml setl ts=2 sw=2 sts=2 et
 autocmd Filetype html setl ts=2 sw=2 sts=2 et
 autocmd Filetype css setl ts=4 sw=4 sts=4 et
 " Remove trailing whitespace on save
-autocmd BufWritePre * %s/\s\+$//e
+"autocmd BufWritePre * %s/\s\+$//e
 
-let g:mustache_operators = 0
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_section_b = '%{strftime("%c")}'
+"let g:airline_section_b = '%{strftime("%c")}'
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
 
 set laststatus=2
 
-let g:solarized_termcolors=256
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
