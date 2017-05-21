@@ -14,3 +14,7 @@ for file in $files; do
 	echo "Linking from '$dotfiles/$file' to '$HOME/.$file'"
 	ln -s "$dotfiles/$file" "$HOME/.$file"
 done
+
+vscodeConfigDir="$HOME/.config/Code/User"
+mkdir -p "$vscodeConfigDir"
+ln -s "$dotfiles/vscode.json" "$vscodeConfigDir/settings.json"
